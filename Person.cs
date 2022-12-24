@@ -16,5 +16,10 @@ namespace AddressBook_UC5_UC10_
         public string City { get; set; }
         public string ZipCode { get; set; }
         public string EmailId { get; set; }
+
+        internal static void Add(string? name, List<Person> person1)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

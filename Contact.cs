@@ -54,5 +54,18 @@ namespace AddressBook_UC5_UC10_
             Console.WriteLine("Contacts are successfully Deleted");
             Console.ReadLine();
         }
+        // UC5
+        public void CreateDict()
+        {
+            Console.WriteLine("Enter a name here");
+            string name = Console.ReadLine();
+            Person.Add(name, person1);
+            person1 = new List<Person>();
+        }
+
+        internal void displayDetails()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
