@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ namespace AddressBook_UC5_UC10_
     internal class Contact
     {
         List<Person> person1 = new List<Person>();
+        Dictionary<string, List<Person>> person2 = new Dictionary<string, List<Person>>();
         public void addcontact()
         {
             Person person = new Person();
@@ -66,6 +68,24 @@ namespace AddressBook_UC5_UC10_
         internal void displayDetails()
         {
             throw new NotImplementedException();
+        }
+
+        //UC6
+        public void DisplayDict()
+        {
+            foreach (var data in person2)
+            {
+                Console.WriteLine(data.Key);
+                foreach (var contact in data.Value)
+                {
+                    Console.WriteLine(contact.FirstName);
+                    Console.WriteLine(contact.LastName);
+                    Console.WriteLine(contact.Address);
+                    Console.WriteLine(contact.PhoneNo);
+                    Console.WriteLine(contact.ZipCode);
+                    Console.WriteLine(contact.EmailId);
+                }
+            }
         }
     }
 }
