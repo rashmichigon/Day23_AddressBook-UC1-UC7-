@@ -42,5 +42,17 @@ namespace AddressBook_UC5_UC10_
             Console.WriteLine("Contacts are successfully Edited");
             Console.ReadLine();
         }
+        //UC4-Delete contact Details
+        public void RemoveDetails()
+        {
+            Console.WriteLine("Enter the first Name");
+            string FirstName = Console.ReadLine();
+            Console.WriteLine("Enter the last Name");
+            string LastName = Console.ReadLine();
+            Person person = new Person();
+            person1.Remove(person);
+            Console.WriteLine("Contacts are successfully Deleted");
+            Console.ReadLine();
+        }
     }
 }
