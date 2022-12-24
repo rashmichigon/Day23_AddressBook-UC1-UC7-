@@ -29,7 +29,23 @@ namespace AddressBook_UC5_UC10_
             person.ZipCode = Console.ReadLine();
             Console.Write("Enter EmailId : ");
             person.EmailId = Console.ReadLine();
-            person1.Add(person);
+
+            //UC7
+            if (person1.Count > 0)
+            {
+                foreach (var contact in person1)
+                {
+                    if (contact.FirstName.Equals(person.FirstName) && contact.LastName.Equals(person.LastName))
+                    {
+                        Console.WriteLine("*************");
+                        Console.WriteLine(person.FirstName + " is already Present in the AddressBook");
+                    }
+                    else
+                        person1.Add(person);
+                }
+            }
+            else
+                person1.Add(person);
             Console.ReadLine();
         }
         //UC3-Edit person Details
