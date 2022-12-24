@@ -30,5 +30,17 @@ namespace AddressBook_UC5_UC10_
             person1.Add(person);
             Console.ReadLine();
         }
+        //UC3-Edit person Details
+        public void EditContact()
+        {
+            Console.WriteLine("Enter the 1st Name");
+            string FirstName = Console.ReadLine();
+            Person person = new Person();
+            person1.Equals(person);
+            Console.WriteLine("Enter a new Name");
+            Console.ReadLine();
+            Console.WriteLine("Contacts are successfully Edited");
+            Console.ReadLine();
+        }
     }
 }
